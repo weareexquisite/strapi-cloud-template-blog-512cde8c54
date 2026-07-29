@@ -5,7 +5,7 @@
     "singularName": "author",
     "pluralName": "authors",
     "displayName": "Author",
-    "description": "Create authors for your content"
+    "description": "One named author: David Shaw (brief 10.1). Real credentials, real photo, sameAs only to verifiable profiles."
   },
   "options": {
     "draftAndPublish": false
@@ -13,22 +13,28 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
-    "avatar": {
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "photo": {
       "type": "media",
       "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": ["images"]
     },
-    "email": {
-      "type": "string"
+    "credentials": {
+      "type": "text"
     },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "author"
+    "sameAs": {
+      "type": "json",
+      "description": "Array of verifiable profile URLs for Person schema. Never invent entries."
     }
   }
 }

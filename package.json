@@ -1,5 +1,5 @@
 {
-  "name": "my-app-name",
+  "name": "soccertips-cms",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -7,7 +7,6 @@
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
-    "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
     "strapi": "strapi"
   },
