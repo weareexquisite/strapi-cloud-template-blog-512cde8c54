@@ -50,6 +50,10 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "publishedDate": {
+      "type": "date",
+      "description": "Editorial publication date shown on the site (publishedAt is system-managed and cannot be backdated)"
     }
   }
 }
