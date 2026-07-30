@@ -43,6 +43,13 @@
       "type": "string",
       "default": "David Shaw",
       "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
